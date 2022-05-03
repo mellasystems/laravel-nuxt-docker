@@ -1,42 +1,12 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-.env
-.env.backup
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-/.idea
-/.vscode
-
+# Created by .ignore support plugin (hsz.mobi)
+### Node template
 # Logs
-logs
+/logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 # Runtime data
 pids
 *.pid
@@ -87,6 +57,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
+.env
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -98,6 +69,7 @@ typings/
 .nuxt
 
 # Nuxt generate
+dist
 
 # vuepress build output
 .vuepress/dist
@@ -106,11 +78,13 @@ typings/
 .serverless
 
 # IDE / Editor
+.idea
 
 # Service worker
 sw.*
 
 # macOS
+.DS_Store
 
 # Vim swap files
 *.swp

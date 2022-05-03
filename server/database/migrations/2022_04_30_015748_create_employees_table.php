@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->boolean('status');
             $table->date('created_date');
-            $table->enum('sex', ['masculine', 'feminine']);
+            $table->enum('sex', ['Masculino', 'Femenino']);
             $table->double('salary');
         });
     }

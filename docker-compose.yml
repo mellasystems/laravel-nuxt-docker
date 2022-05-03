@@ -21,16 +21,16 @@ services:
       - app
 
   #Vue FrontEnd
-  vue:
+  nuxt:
     build:
-      context: ./client
+      context: ./nuxt
       dockerfile: Dockerfile
-    working_dir: /var/www/vue
+    working_dir: /var/www/nuxt
     tty: true
     ports:
-      - 3002:3002
+      - 3000:3000
     volumes:
-      - ./client:/var/www/vue
+      - ./nuxt:/var/www/nuxt
     depends_on:
       - api
     networks:

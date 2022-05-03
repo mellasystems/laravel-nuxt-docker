@@ -21,7 +21,7 @@ class EmployeeFactory extends Factory
             'name' => $this->faker->name(),
             'status' => $this->faker->boolean,
             'created_date' => now(),
-            'sex' => $this->faker->randomElement(['masculine', 'feminine']),
+            'sex' => $this->faker->randomElement(['Masculino', 'Femenino']),
             'salary' => $this->faker->randomDigit(),
         ];
     }

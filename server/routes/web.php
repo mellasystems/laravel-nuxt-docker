@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json([
+        'data' => [
+            'message' => 'Bienvenido al API REST FULL de ILP para Registro de Empleados',
+            'author' => 'José Mella Garcia'
+        ],
+        'company' => 'ILP'
+    ]);
 });

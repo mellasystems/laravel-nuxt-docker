@@ -1,68 +1,51 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# nuxt-auth-with-laravel-sanctum-docker
 
-## Laravel 7 and React 16.13 boilerplate
-There are two different ways to run this demo
+My CRUD project built with [**Laravel**](https://laravel.com/) as server side language, [**NuxtJS**](https://nuxtjs.org/) and [**Boostrap5**](https://getbootstrap.com/) as frontend framework and [**PostgreSQL**](https://www.postgresql.org/) as database server.
 
-Please follow the guide.
+## Features Implemented
 
-## Prerequisite
+1. CRUD Employee With Laravel API
+2. Simple notifications for validation actions
+3. Authentication using [**Laravel Sanctum**](https://www.npmjs.com/package/jsonwebtoken) and [**@nuxtjs/auth**](https://auth.nuxtjs.org/) module.
 
-1. Make sure you have [composer](https://getcomposer.org/download/) installed.
-2. Make sure you have latest stable version of [node](https://nodejs.org/en/download/) installed.
 
-### Option 1
 
-1. `git clone`
-2. `create a .env file copy content from .env.example and update the values`
-3. `composer install && composer update`
-4. `php artisan cron:refresh-database`
-5. `npm install && npm run dev`
-6. `php artisan key:gen`
-7. `php artisan serve`
+## Build Setup whitout Docker
 
-### Option 2
+#Setup API Laravel
 
-## Prerequisite
-Make sure you have [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed on you machine.
-
-1. `git clone`
-2. `create a .env file copy content from .env.docker and do not make any change`
-
-run following command in terminal / power shell
+**1. Clone or download the repository and enter its folder**
 ```
-docker-compose up -d
+https://github.com/mellasystems/laravel-nuxt-docker.git
+cd laravel-nuxt-docker
+
+# cd server directory
+$ cd server/
+
+# install dependencies
+$ composer install
+
+# serve with hot reload at localhost:8000
+$ php artisan serve
+
 ```
 
-when docker will finish building the containers, access the "laravel-react-app" container using following command
+#Setup Frontend NuxtJS
+``` bash
+# cd nuxt directory
+$ cd .. & cd nuxt/
 
-`docker exec -it laravel_react_app sh`
+# install dependencies
+$ npm run install
 
-now you will be inside container
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-run following commands
-1. `composer install && composer update`
-2. `php artisan cron:refresh-database`
-3. `php artisan key:gen`
-4. `npm install && npm run dev`
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-open browser and check the following address
-
-`http://localhost:8100`
-
-TODO:
-
-- [x] Add Redux
-- [x] Add Passport for authentication
-- [x] User Login
-- [x] User Register
-- [x] Users Crud
-- [x] Articles Crud
-- [x] Form validation Client and Server
-- [ ] Reset Password
-- [x] Tests
-- [x] Upgrade to Laravel 7
-- [x] Upgrade to React 16.13
-- [x] docker
-
-
-
+# generate static project
+$ npm run generate
+```
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
