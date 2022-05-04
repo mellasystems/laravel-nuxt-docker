@@ -19,8 +19,9 @@ class EmployeeController extends Controller
         return EmployeeCollection::make($employees);
     }
 
-    public function show(Employee $employee): EmployeeResource
+    public function show($id): EmployeeResource
     {
+        $employee = Employee::findOrFail($id);
         return EmployeeResource::make($employee);
     }
 
@@ -39,9 +40,9 @@ class EmployeeController extends Controller
         return EmployeeResource::make($employee);
     }
 
-    public function destroy(Employee $employee): Response
+    public function destroy($id)
     {
+        $employee = Employee::findOrFail($id);
         $employee->delete();
-        return response()->noContent();
     }
 }

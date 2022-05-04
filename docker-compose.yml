@@ -20,22 +20,6 @@ services:
     networks:
       - app
 
-  #Vue FrontEnd
-  nuxt:
-    build:
-      context: ./nuxt
-      dockerfile: Dockerfile
-    working_dir: /var/www/nuxt
-    tty: true
-    ports:
-      - 3000:3000
-    volumes:
-      - ./nuxt:/var/www/nuxt
-    depends_on:
-      - api
-    networks:
-      - app
-
   #DataBase PosGresQL
   db:
     image: postgres:14.1-alpine

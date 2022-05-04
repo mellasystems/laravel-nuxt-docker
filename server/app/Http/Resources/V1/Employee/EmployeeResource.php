@@ -15,12 +15,12 @@ class EmployeeResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => (string)$this->id,
-            'name' => $this->name,
-            'status' => $this->status,
-            'created_date' => $this->created_date,
-            'sex' => $this->sex,
-            'salary' => $this->salary
+            'id' => (string)$this->resource->id,
+            'name' => $this->resource->name,
+            'status' => $this->resource->status,
+            'created_date' => $this->resource->created_date,
+            'sex' => $this->resource->sex,
+            'salary' => $this->resource->salary
         ];
     }
 }
