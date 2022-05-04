@@ -18,7 +18,7 @@ class EmployeeController extends Controller
         $employees = Employee::latestFirst()->paginate(5);
         return EmployeeCollection::make($employees);
     }
-    
+
     public function getAllEmployee()
     {
         $employees = Employee::all();
