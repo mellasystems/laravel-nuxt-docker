@@ -16,10 +16,7 @@ class EmployeeCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
-            'data' => $this->collection,
-            'links' => [
-                'self' => route('employees.index')
-            ]
+            'data' => $this->collection
         ];
     }
 }
