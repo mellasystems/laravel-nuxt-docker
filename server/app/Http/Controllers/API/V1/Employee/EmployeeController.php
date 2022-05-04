@@ -19,6 +19,12 @@ class EmployeeController extends Controller
         return EmployeeCollection::make($employees);
     }
 
+    public function getAllEmployee()
+    {
+        $employees = Employee::all();
+        return response()->json($employees);
+    }
+
     public function show(Employee $employee): EmployeeResource
     {
         return EmployeeResource::make($employee);

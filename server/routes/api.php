@@ -16,6 +16,7 @@ Route::prefix('v1')->group(function(){
     Route::middleware('auth:sanctum')->group(function(){
 
         //Employees API Resource
+        Route::get('reports/employees', [EmployeeController::class, 'getAllEmployee']);
         Route::apiResource('employees', EmployeeController::class);
 
         //Users API Resource
@@ -26,8 +27,7 @@ Route::prefix('v1')->group(function(){
         Route::post('/logout', [AuthController::class, 'logout']);
 
         //Reports Users and Employees
-        Route::get('reports/users', [UserController::class]);
-        Route::get('reports/employees', [EmployeeController::class, 'index']);
+        Route::get('reports/users', [UserController::class, 'index']);
     });
 
 });
