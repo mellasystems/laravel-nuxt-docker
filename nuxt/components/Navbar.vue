@@ -49,9 +49,7 @@ export default {
   computed: {},
   methods: {
     async logout() {
-      this.$nuxt.$loading.start();
       this.$auth.logout();
-      this.$nuxt.$loading.start();
       this.$router.push('login');
     }
   }

@@ -60,8 +60,8 @@
               <div class="form-group">
                 <select class='form-control' name="sex" v-model.trim="form.sex">
                   <option value='1'>Seleccionar</option>
-                  <option value="feminine">Femenino</option>
-                  <option value="masculine">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Masculino">Masculino</option>
                 </select>
                 <small class="form-text text-danger" v-if="errors.sex">{{ errors.sex[0] }}</small>
               </div>
