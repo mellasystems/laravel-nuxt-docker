@@ -1,9 +1,11 @@
 <template>
   <div>
+<!-- Navbar   -->
     <Navbar/>
-    <main class="container-fluid">
-      <nuxt/>
+    <main class="container container-fluid">
+      <Nuxt keep-alive/>
     </main>
+<!--    <Footer/>-->
   </div>
 </template>
 

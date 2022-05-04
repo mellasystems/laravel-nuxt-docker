@@ -1,6 +1,6 @@
 <template>
     <div class="card mt-2">
-      <!-- Here start the form for register employee     -->
+      <!-- Here start the form for register employees     -->
       <div class="card-body">
         <template>
           <div class="card-header">
@@ -22,8 +22,9 @@
               <td>{{ user.email }}</td>
               <td>
                 <div class="btn-group" role="group">
-                  <button type="button" class="btn btn-info">Editar</button>&nbsp;&nbsp;
-                  <button type="button" class="btn btn-danger">Borrar</button>
+                  <b-btn type="button" class="btn-warning"
+                  tooltip="Boton deshabilitado">Editar</b-btn>&nbsp;&nbsp;
+                  <b-btn type="button" class="btn-danger">Borrar</b-btn>
                 </div>
               </td>
             </tr>

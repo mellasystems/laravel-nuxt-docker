@@ -41,8 +41,9 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
   ],
+
   //Configuring the auth for api laravel with Sanctum
   auth: {
     strategies: {

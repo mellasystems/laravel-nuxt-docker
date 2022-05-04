@@ -15,13 +15,13 @@
               <NuxtLink to="/" class="nav-link">Inicio</NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/employee" class="nav-link">Empleados</NuxtLink>
+              <NuxtLink to="/employees" class="nav-link">Empleados</NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/user" class="nav-link">Usuarios</NuxtLink>
+              <NuxtLink to="/users" class="nav-link">Usuarios</NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/report" class="nav-link">Reporte</NuxtLink>
+              <NuxtLink to="/reports" class="nav-link">Reporte</NuxtLink>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
@@ -53,6 +53,7 @@ export default {
       this.$auth.logout();
       this.$nuxt.$loading.start();
       this.$router.push('login');
+      this.$nuxt.refresh();
     }
   }
 }
