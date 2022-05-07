@@ -38,11 +38,10 @@ class EmployeeController extends Controller
         return EmployeeResource::make($employee);
     }
 
-    public function update(SaveEmployeeResquest $request, Employee $employee): EmployeeResource
+    public function update(SaveEmployeeResquest $request, $id): EmployeeResource
     {
-
+        $employee = Employee::findOrFail($id);
         $employee->update($request->validated());
-
         return EmployeeResource::make($employee);
     }
 

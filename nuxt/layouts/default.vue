@@ -10,9 +10,13 @@
 </template>
 
 <script>
+import Navbar from "@/components/Navbar";
 export default {
   name: "default",
-  auth: false
+  auth: false,
+  components: {
+    Navbar
+  }
 }
 </script>
 

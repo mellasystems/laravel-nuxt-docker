@@ -31,7 +31,7 @@ class SaveEmployeeResquest extends FormRequest
             'name' => 'required|min:3|regex:/^[\pL\s\-]+$/u',
             'status' => 'required|bool',
             'created_date' => 'required|date',
-            'sex' => Rule::in('Masculino', 'Femenino'),
+            'sex' => Rule::in('Femenino', 'Masculino'),
             'salary' => 'required|numeric'
         ];
     }
