@@ -51,12 +51,15 @@ $ sudo apt install build-essential
 $ git clone https://github.com/mellasystems/laravel-nuxt-docker.git
 
 $ cd laravel-nuxt-docker
+$ cd server
 
 # copy the .env-example to .env on directory /server
-$ cp server/.env.example server/.env
+$ cp .env.example .env
+
+#install dependences
+$composer install
 
 # run this command to build the imagen for the Laravel API
-$ docker-compose build
 $ docker-compose up -d
 
 # generate key application
@@ -71,7 +74,7 @@ $ docker-compose exec api php artisan migrate --seed
 #Setup Frontend NuxtJS
 ``` bash
 # enter into nuxt directory
-$ cd nuxt/
+$ cd ../nuxt/
 
 # install dependencies
 $ npm install

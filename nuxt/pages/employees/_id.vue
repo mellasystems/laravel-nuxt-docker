@@ -88,7 +88,7 @@ export default {
   methods: {
     //Method for update an employees
     async update(){
-      await this.$axios.patch('api/v1/employees/'+this.$route.params.edit, {
+      await this.$axios.patch('api/v1/employees/'+this.$route.params.id, {
         'name': this.name,
         'sex': this.sex,
         'created_date': this.created_date,
@@ -102,7 +102,7 @@ export default {
       });
     },
     getEmployeeById(){
-      let id = this.$route.params.edit;
+      let id = this.$route.params.id;
       this.$axios.$get(`api/v1/employees/${id}`).then((response) => {
         {
           this.name= response.data.name;

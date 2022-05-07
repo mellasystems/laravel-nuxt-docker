@@ -27,9 +27,9 @@
           <td>
             <div class="btn-group" role="group">
               <nuxt-link :to="{
-                name: 'employees-edit',
-                path: 'employees/:edit',
-                params: {edit: employee.id},
+                name: 'employees-id',
+                path: 'employees/:id',
+                params: {id: employee.id},
               }" class="btn btn-warning">Editar
               </nuxt-link>&nbsp;&nbsp;
               <a type="button" class="btn btn-danger" @click="deleteEmployee(employee.id)">Borrar</a>

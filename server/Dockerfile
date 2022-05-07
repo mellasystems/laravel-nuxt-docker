@@ -22,11 +22,12 @@ RUN composer self-update
 RUN docker-php-ext-install pgsql pdo pdo_pgsql mbstring exif pcntl bcmath gd
 #RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
 
+# Copy composer.lock and composer.json
+COPY . /var/www
+
 # Set working directory
 WORKDIR /var/www
 
-# Copy composer.lock and composer.json
-COPY . .
 
 # Composer Install
 RUN composer install
